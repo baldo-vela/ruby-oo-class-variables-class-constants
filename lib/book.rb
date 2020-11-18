@@ -1,6 +1,10 @@
+# book.rb
+
 class Book
   attr_accessor :author, :page_count, :genre
   attr_reader :title
+
+  GENRES = []
 
   def initialize(title)
     @title = title
@@ -10,4 +14,10 @@ class Book
     puts "Flipping the page...wow, you read fast!"
   end
 
-end
+  #Creates a writer for the genre and logic for the class constant
+  def genre=(genre)
+    @genre = genre
+    GENRES << genre
+  end
+  
+end 
